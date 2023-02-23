@@ -12,14 +12,14 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=LVIV&units=metric&APPID=
     let img = document.querySelector(".weather_img");
 
     city.innerHTML = data.name;
-    temperature.innerHTML = `Current temperature: ${data.main.temp}`;
-    pressure.innerHTML = `Pressure: ${data.main.pressure}`;
+    temperature.innerHTML = `Current temperature: ${data.main.temp} °C`;
+    pressure.innerHTML = `Pressure: ${data.main.pressure} Pa`;
     data.weather.forEach(item => {
         description.innerHTML = `Description: ${item.description}`;
     });
-    humidity.innerHTML = `Humidity: ${data.main.humidity}`;
-    speed.innerHTML = `Speed: ${data.wind.speed}`;
-    deg.innerHTML = `Deg: ${data.wind.deg}`;
+    humidity.innerHTML = `Humidity: ${data.main.humidity}%`;
+    speed.innerHTML = `Speed: ${data.wind.speed} Km/h`;
+    deg.innerHTML = `Deg: ${data.wind.deg}°`;
     img.src = "http://openweathermap.org/img/w/04d.png";
 });
 
