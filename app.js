@@ -1,5 +1,5 @@
 fetch(
-  "http://api.openweathermap.org/data/2.5/weather?q=LVIV&units=metric&APPID=5d066958a60d315387d9492393935c19"
+  "https://api.openweathermap.org/data/2.5/weather?q=LVIV&units=metric&APPID=5d066958a60d315387d9492393935c19"
 )
   .then((response) => response.json())
   .then((data) => {
@@ -21,5 +21,15 @@ fetch(
     humidity.innerHTML = `Humidity: ${data.main.humidity}%`;
     speed.innerHTML = `Speed: ${data.wind.speed} Km/h`;
     deg.innerHTML = `Deg: ${data.wind.deg}°`;
-    img.src = "http://openweathermap.org/img/w/04d.png";
+    img.src = "https://openweathermap.org/img/w/04d.png";
   });
+
+// try {
+//   fetch(
+//     "http://api.openweathermap.org/data/2.5/weather?q=LVIV&units=metric&APPID=5d066958a60d315387d9492393935c19"
+//   )
+//     .then((responce) => responce.json())
+//     .then((data) => console.log(data));
+// } catch (e) {
+//   console.log(e);
+// }
