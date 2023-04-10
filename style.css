@@ -1,17 +1,60 @@
-.container{
-    margin: 0 auto;
-    margin-top: 90px;
-    width: 240px;
-    height: 200px;
-    border: 1px solid #EFEFEF;
+body {
+  background-color: #313131;
 }
 
-.container_items{
-    margin: 15px 0 0 15px;
+.wrapper {
+  margin-top: 140px;
 }
 
-.city_name{
-    display: inline-block;
-    font-weight: 700;
-    font-size: 20px;
+.weather {
+  background-color: #7a956b;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 450px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-family: "Open Sans", sans-serif;
+}
+
+.weather__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather__loading img {
+  max-width: 75px;
+}
+
+.weather__header {
+  display: flex;
+}
+
+.weather__main {
+  flex: 1 1 auto;
+}
+
+.weather__city {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.weather__status {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.weather__temp {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.weather__temp::after,
+.weather__feels-like::after {
+  display: inline-block;
+  margin-left: 5px;
+  content: "°C";
 }
